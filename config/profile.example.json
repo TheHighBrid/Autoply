@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-08-01T00:00:00.000Z",
+  "updatedAt": "2026-08-01T00:00:00.000Z",
+  "candidate": {
+    "id": "candidate-example",
+    "identity": {
+      "fullName": "Example Candidate",
+      "email": "candidate@example.com",
+      "city": "Ottawa",
+      "region": "Ontario",
+      "country": "Canada"
+    },
+    "facts": {
+      "skills": ["fraud investigation", "AML", "banking", "bilingual"],
+      "workAuthorization": "Authorized to work in Canada",
+      "requiresSponsorship": false
+    },
+    "preferences": {
+      "titles": ["Fraud Investigator", "AML Analyst"],
+      "locations": ["Ottawa", "Remote"],
+      "remote": true,
+      "excludedCompanies": []
+    },
+    "answerBank": {
+      "work_authorization": {
+        "answer": "Authorized to work in Canada",
+        "verifiedAt": "2026-08-01T00:00:00.000Z",
+        "source": "candidate"
+      },
+      "requires_sponsorship": {
+        "answer": "No",
+        "verifiedAt": "2026-08-01T00:00:00.000Z",
+        "source": "candidate"
+      }
+    },
+    "resumes": []
+  },
+  "policy": {
+    "mode": "review",
+    "maxApplicationsPerDay": 10,
+    "requireEvidence": true
+  }
+}

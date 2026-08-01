@@ -2,6 +2,8 @@ node_modules/
 dist/
 .env
 .local/
+.autoply/
 artifacts/
 profiles/
+config/profile.json
 *.sqlite

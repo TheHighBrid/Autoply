@@ -2,9 +2,9 @@
 
 Evidence-first job-search and application automation.
 
-Autoply is a local-first reference implementation for a system that discovers and scores roles, manages an application queue, generates tailored materials, fills supported ATS forms through retained browser sessions, records tamper-evident submission evidence, and schedules follow-ups.
+Autoply is a local-first system being built to discover and score roles, manage an application queue, generate tailored materials, fill supported ATS forms through retained browser sessions, record tamper-evident submission evidence, and schedule follow-ups.
 
-> Status: architecture-complete starter repository. Discovery, scoring, queueing, evidence capture, policy gates, and ATS adapter contracts are implemented as reusable core modules. Real ATS selectors and provider integrations must be validated against current sites before production use.
+> Current milestone: the private candidate profile, verified answer bank, policy defaults, diagnostics, canonical job import, deterministic scoring, and runnable CLI are implemented. Real job-source connectors and ATS browser adapters remain under development.
 
 ## Design principles
 
@@ -32,25 +32,34 @@ Candidate Vault -> Material Builder -> Policy Gate -> ATS Adapter
 ## Packages
 
 - `packages/domain`: canonical job, candidate, application and evidence models
+- `packages/config`: private local profile, validation, answer bank, paths and job import
 - `packages/scoring`: transparent weighted role scoring
 - `packages/queue`: application state machine and transition guards
 - `packages/policy`: truth, consent and automation boundaries
 - `packages/browser`: retained-session contract and browser run context
 - `packages/adapters`: ATS adapter interface and capability registry
 - `packages/evidence`: manifest hashing and submission certification
+- `apps/cli`: interactive setup, diagnostics, profile, job import and scoring commands
 - `apps/worker`: orchestration example
-- `docs/RESEARCH.md`: source-repository comparison and extraction map
-- `docs/ARCHITECTURE.md`: production architecture and rollout stages
-- `docs/THREAT-MODEL.md`: security and privacy controls
 
 ## Quick start
 
 ```bash
 corepack enable
+corepack prepare pnpm@10.0.0 --activate
 pnpm install
 pnpm test
-pnpm demo
+pnpm autoply setup
+pnpm autoply doctor
 ```
+
+Then score the included example role:
+
+```bash
+pnpm autoply score examples/jobs/fraud-investigator.json
+```
+
+See [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md) for the complete first-run workflow.
 
 ## What counts as a submitted application?
 

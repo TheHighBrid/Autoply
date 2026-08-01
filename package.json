@@ -1,1 +1,20 @@
-{"name":"applyforge","private":true,"type":"module","packageManager":"pnpm@10.0.0","scripts":{"build":"pnpm -r build","test":"pnpm -r test","demo":"tsx apps/worker/src/demo.ts"},"devDependencies":{"tsx":"^4.19.0","typescript":"^5.7.0"}}
+{
+  "name": "autoply",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "pnpm -r --if-present build",
+    "test": "pnpm build && node --test tests/*.test.mjs",
+    "check": "pnpm test",
+    "demo": "pnpm build && node apps/worker/dist/demo.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

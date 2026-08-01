@@ -1,8 +1,8 @@
-# ApplyForge
+# Autoply
 
 Evidence-first job-search and application automation.
 
-ApplyForge is a local-first reference implementation for a system that discovers and scores roles, manages an application queue, generates tailored materials, fills supported ATS forms through retained browser sessions, records tamper-evident submission evidence, and schedules follow-ups.
+Autoply is a local-first reference implementation for a system that discovers and scores roles, manages an application queue, generates tailored materials, fills supported ATS forms through retained browser sessions, records tamper-evident submission evidence, and schedules follow-ups.
 
 > Status: architecture-complete starter repository. Discovery, scoring, queueing, evidence capture, policy gates, and ATS adapter contracts are implemented as reusable core modules. Real ATS selectors and provider integrations must be validated against current sites before production use.
 
@@ -68,7 +68,7 @@ If the portal gives no reliable confirmation, the result is `submission_unverifi
 
 ## Safety boundary
 
-ApplyForge does not include CAPTCHA bypassing, stealth fingerprint spoofing, credential harvesting, fabricated answers, or hidden mass-submission defaults. It supports user-authenticated retained sessions and explicit handoff states.
+Autoply does not include CAPTCHA bypassing, stealth fingerprint spoofing, credential harvesting, fabricated answers, or hidden mass-submission defaults. It supports user-authenticated retained sessions and explicit handoff states.
 
 ## License
 

@@ -1,0 +1,17 @@
+{
+  "name": "@autoply/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "autoply": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@autoply/config": "workspace:*",
+    "@autoply/domain": "workspace:*",
+    "@autoply/scoring": "workspace:*"
+  }
+}

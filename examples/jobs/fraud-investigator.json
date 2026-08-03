@@ -1,0 +1,13 @@
+{
+  "id": "example-fraud-investigator",
+  "source": "manual",
+  "sourceJobId": "example-001",
+  "canonicalUrl": "https://example.com/jobs/fraud-investigator",
+  "company": "Example Bank",
+  "title": "Fraud Investigator",
+  "location": "Ottawa, Ontario",
+  "remote": false,
+  "description": "Investigate banking fraud, review suspicious transactions and AML alerts, document findings, and communicate in English and French.",
+  "fingerprint": "example-bank-fraud-investigator-ottawa",
+  "discoveredAt": "2026-08-01T00:00:00.000Z"
+}

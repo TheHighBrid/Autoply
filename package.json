@@ -1,6 +1,6 @@
 {
   "name": "autoply",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.0.0",
@@ -11,7 +11,8 @@
     "build": "pnpm -r --if-present build",
     "test": "pnpm build && node --test tests/*.test.mjs",
     "check": "pnpm test",
-    "demo": "pnpm build && node apps/worker/dist/demo.js"
+    "demo": "pnpm build && node apps/worker/dist/demo.js",
+    "autoply": "pnpm build && node apps/cli/dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

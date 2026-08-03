@@ -4,6 +4,17 @@ export type ApplicationState =
   | "in_progress" | "human_handoff" | "submission_unverified" | "submitted"
   | "failed" | "withdrawn" | "rejected" | "interview" | "offer";
 
+export interface CandidateIdentity {
+  fullName: string;
+  email: string;
+  phone?: string;
+  city?: string;
+  region?: string;
+  country: string;
+  linkedinUrl?: string;
+  portfolioUrl?: string;
+}
+
 export interface CanonicalJob {
   id: string;
   source: string;
@@ -23,8 +34,15 @@ export interface CanonicalJob {
 
 export interface CandidateProfile {
   id: string;
+  identity?: CandidateIdentity;
   facts: Record<string, string | number | boolean | string[]>;
-  preferences: { titles: string[]; locations: string[]; remote?: boolean; minCompensation?: number; excludedCompanies?: string[] };
+  preferences: {
+    titles: string[];
+    locations: string[];
+    remote?: boolean;
+    minCompensation?: number;
+    excludedCompanies?: string[];
+  };
   answerBank: Record<string, { answer: string; verifiedAt: string; source: "candidate"|"document" }>;
   resumes: Array<{ id: string; path: string; sha256: string; tags: string[] }>;
 }
